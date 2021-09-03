@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Luca Changretta</title>
+  <title>Bootsy's Site</title>
   <!--Here is the link to the site CSS-->
   <link rel="stylesheet" href="css/site.css">
 
@@ -13,43 +13,84 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </head>
 
-<style>
-
-</style>
-
 <body>
-  <div class="container-fluid">
-    <header class="row" id="header1">
-      
-      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-1">
-        <img class="logo" src= "" alt="Logo Image">
+  <!--This is a bootstap navbar that looks really great-->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+    <div class="container-fluid">
+        <h1 class="navbar-brand">I am Bootsy</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="index.html">About Bootsy</a>
+            <a class="nav-link" href="books.html">Bootsy's Books</a>
+            <a class="nav-link" href="exploits.html">Bootsy's Exploits</a>
+          </div>
+        </div>
       </div>
-      
-      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-11" id="title">		
-        <h1 class="title">Changretta Company Ltd.</h1>
-      </div>    
-      
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="mynavbar">
-        <ul class="nav nav-pills nav-justified" >
-          <li class="nav-item" id="navitem">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>  
-          <li class="nav-item" id="navitem">
-            <a class="nav-link active" aria-current="page" href="aboutme.html">Meet Luca</a>
-          </li>
-          <li class="nav-item" id="navitem">
-            <a class="nav-link active" aria-current="page" href="books.html">Luca's Reading</a>
+    </nav>
+  </header>
+  
+  <!--Break for formatting-->
+  <br>
+  
+  <!--Body content begins here and it is super fluid as page size changes-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+        <h1>Basic Information</h1>
+        <ul>
+          <li><b>Name: </b>Bootsy</li>
+          <li><b>Country of Origin: </b>United States - Baltimore, MD</li>
+          <li><b>Birthday: </b>June 15, 2006</li>
+          <li><b>Age: </b>14 Years</li>
+          <li><b>Email: </b><a href="mailto:bootsy@bootsymail.com" id="link">bootsy@bootsymail.com</a></li>
+          <li><b>Interests:</b>
+            <ul>
+              <li>Chiquita Bananas</li>
+              <li>Computing</li>
+              <li>Eating things off the floor</li>
+            </ul>
           </li>
         </ul>
       </div>
-    
-    </header>
+      
+      <!--This is my own image so no citation needed-->
+      <div class="col-xs-12 col-sm-6 col-md-8 col-lg-6" id="bootsydiv">
+        <img class ="bootsy" src= "img/bootsy.jpg" alt="Picture of dog computing">
+      </div>
+      
+      <!--Just jibberish about my dog-->
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1>Bootsy's Mission</h1>
+        <p>
+          Bootsy, from a very young age, has always had a passion for computing.
+          From the first moment he laid eyes on a motherboard, he knew that technology was his calling.
+          Bootsy has a Phd. from every major university and has been awarded <b>Dog of Year</b> for five years running. 
+          He recently recieved an the key to New York City where he has been known to live.
+        </p>
+        <hr>
+        <p>
+          Bootsy, now retired, enjoys cyber security on his free time.
+          On a continual mission to learn, he finds himself conducting malware analysis and forensics to better help others learn about computing.
+          On his free time, Bootsy enjoys long walks in the park and the occasional banana.
+        </p>
+      </div>
+    </div>
   </div>
-  
-  <p>Your content goes here.</p>
+
+  <!--Break for formatting-->
+  <br>
+  <br>
+
+  <!--End Body Content-->
 </body>
 
+<!--Footer content-->
 <footer>
+  <p><b>Site owned by Bootsy LLC.</b> | For more information or to report an error please email <a href="mailto:bootsy@bootsymail.com" id="link">bootsy@bootsymail.com</a></p>
 </footer>
 
 </html>
