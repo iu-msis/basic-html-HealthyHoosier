@@ -4,6 +4,18 @@
     border-color: Black;
     border-style: solid;
 }
+
+body{
+    color: rgb(54, 8, 8);
+    background-color: rgb(209, 205, 193);
+}
+h1{
+    color:red;
+}
+#title{
+    color: red;
+}
+/*This is a css class declaration*/
 .bootsy{
     border: 3px solid;
     border-color: black;
@@ -16,10 +28,23 @@
     margin-top: auto;
     display: block;
 }
+.bootsy_again{
+    border: 3px solid;
+    border-color: black;
+    width:60%;
+    height:100%;
+    max-height: 350px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    display: block;
+}
 footer{
     text-align: center;
     background-color: rgb(230, 216, 216);
 }
+/*This us a css ID declaration*/
 #bootsy_excerpt{
     font-family: monospace;
     text-align: center;
@@ -34,4 +59,56 @@ footer{
 #link{
     color: rgb(0, 0, 0);
 }
+#table1{
+    align-content: center;
+    margin: auto;
+}
+td{
+    margin: auto;
+    padding: 7px;
+}
+#book_header{
+    text-align: center;
+    border-radius: 5px;
+    color: red;
+    padding: 5px;
+}
+form{
+    border: 3px dashed;
+    border-color: black;
+    padding:10px;
+    align-content: center;
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: auto;
 
+}
+legend{
+   text-align: center;
+   color: red;
+}
+label{
+    margin-left: 10px;
+}
+input:required{
+    border: 2px solid red;
+}
+.button {
+    font-size:20px;
+    align-content: center;
+    border: 2px solid black;
+    display: block;
+    width: 150px;
+    text-align: center;
+    padding: 7px;
+    background-color: rgb(230, 216, 216);
+    margin: auto;
+    border-radius: 3px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.button:hover{
+    background-color:darkgreen;
+    color: white;
+}

@@ -3,12 +3,13 @@
 
 <head>
   <title>Bootsy's Site</title>
-  <!--Here is the link to the site CSS-->
-  <link rel="stylesheet" href="css/site.css">
 
   <!--Here is where I add the BootstrapCSS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+  
+  <!--Here is the link to the site CSS-->
+  <link rel="stylesheet" href="css/site.css">
+  
   <!--Here is some cheeky JavaScript-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </head>
@@ -18,7 +19,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
     <div class="container-fluid">
-        <h1 class="navbar-brand">I am Bootsy</h1>
+        <h1 class="navbar-brand" id="title">I am Bootsy</h1>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,7 +36,115 @@
   
   <!--Break for formatting-->
   <br>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <!--Header for the table-->
+        <h1 id="book_header">Bootsy's Favorite Books</h1>
+        <!--Here begins our table-->
+        <table class="table-bordered" id="table1">
+          
+          <!--Here are the table headers-->
+          <thead>
+            <th class="text-center">Title</th>
+            <th class="text-center">Author(s)</th>
+            <th class="text-center">Year Published</th>
+            <th class="text-center">Publisher</th>
+            <th class="text-center">Page Count</th>
+            <th class="text-center">MSRP</th>
+          </thead>
 
+          <!--Here begins our table body-->
+          <tbody>
+            <tr>
+              <!--Source for book information: https://www.amazon.com/Cuckoos-Egg-Tracking-Computer-Espionage/dp/1416507787 -->
+              <td>The Cuckoo's Egg</td>
+              <td>Cliff Stoll</td>
+              <td>2005</td>
+              <td>Pocket Books</td>
+              <td>399 Pages</td>
+              <td>$13.69</td>
+            </tr>
+            <tr>
+              <!--Source for book information: https://www.amazon.com/Certified-Information-Security-Professional-Official-ebook/dp/B015E6IU10 -->
+              <td>CISSP (ISC)2 Certified Information Security Professional</td>
+              <td>James Michael Stewart, Mike Chapple, Darril Gibson</td>
+              <td>2015</td>
+              <td>Sybex</td>
+              <td>1405 Pages</td>
+              <td>$40.99</td>
+            </tr>
+            <tr>
+              <!--Source for book information: https://www.amazon.com/Fear-Loathing-Las-Vegas-American/dp/0679785892 -->
+              <td>Fear and Loathing in Las Vegas</td>
+              <td>Hunter S. Thompson</td>
+              <td>1998</td>
+              <td>Vintage</td>
+              <td>204 Pages</td>
+              <td>$8.76</td>
+            </tr>
+            <tr>
+              <!--Source for Book Information: https://www.amazon.com/Hacking-Dummies-Kevin-Beaver/dp/1118380932 -->
+              <td>Hacking For Dummies</td>
+              <td>Kevin Beaver</td>
+              <td>2013</td>
+              <td>For Dummies</td>
+              <td>408 Pages</td>
+              <td>$16.63</td>
+            </tr>
+          </tbody>
+
+        </table>  
+      </div>
+    </div>
+  </div>
+  
+  <!--FOrmatting Breaks-->
+  <br>
+  <br>
+
+  <!--This will begin the form section of this page-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        
+        <!--This begins the form-->
+        <form action="" method="POST">
+          <fieldset>
+            <!--Here is our form title-->
+            <legend id="form_title">Book Entry Form</legend>
+            <br>
+            <br>
+
+            <!--Here are the form fields-->
+            <label for="book_name">Book Name:</label>
+            <input type="text" name="book_name" id="book_name" required><br><br>
+
+            <label for="book_author">Book Author:</label>
+            <input type="text" name="book_author" id="book_author" required><br><br>
+
+            <label for="publish_year">Year Published:</label>
+            <input type="number" name="publish_year" id="publish_year"><br><br>
+
+            <label for="publisher_name">Publisher:</label>
+            <input type="text" name="publisher_name" id="publisher_name"><br><br>
+
+            <label for="pages_number">Number of Pages:</label>
+            <input type="number" name="pages_number" id="pages_number"><br><br>
+
+            <label for="msrp_amount">MSRP:</label>
+            <input type="text" value="$" name="msrp_amount" id="msrp_amount"><br><br>
+
+            <br>
+            <a class="button">Submit Form</a>
+            <br>
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+  </div>
   <!--Break for formatting-->
   <br>
   <br>
@@ -45,7 +154,6 @@
 
 <!--Footer Content-->
 <footer>
-  <p><b>Site owned by Bootsy LLC.</b> | For more information or to report an error please email <a href="mailto:bootsy@bootsymail.com">bootsy@bootsymail.com</a></p>
+  <p><b>Site owned by Bootsy LLC.</b> | For more information or to report an error please email <a href="mailto:bootsy@bootsymail.com" id="link">bootsy@bootsymail.com</a></p>
 </footer>
-
 </html>
