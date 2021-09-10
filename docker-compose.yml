@@ -1,0 +1,8 @@
+version: "3"
+services:
+  healthyhoosier:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app/public/:/var/www/html
