@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Bootsy's Site</title>
-  
+  <!--Required meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!--Here is where I add the BootstrapCSS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
@@ -15,7 +17,11 @@
 
   <!--Vue3-->
   <script src="https://unpkg.com/vue@next"></script>
+  
+  <!--DayJS-->
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 
+  <title>Bootsy's Site</title>
 </head>
 
 <body>
@@ -44,10 +50,10 @@
   <!--Body content begins here and it is super fluid as page size changes-->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6" id="updateMe">
         <h1>Basic Information</h1>
         <ul>
-          <li><b>Name: </b>Bootsy</li>
+          <li><b>Name: </b> {{person.name.first}} </li>
           <li><b>Country of Origin: </b>United States - Baltimore, MD</li>
           <li><b>Birthday: </b>June 15, 2006</li>
           <li><b>Age: </b>14 Years</li>
@@ -86,10 +92,15 @@
     </div>
   </div>
 
+
   <!--Break for formatting-->
   <br>
   <br>
-  
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+  <!--JsConnection-->
+  <script src="js/index.js"></script>
 <!--End Body Content-->
 </body>
 
