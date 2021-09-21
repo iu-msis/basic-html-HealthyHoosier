@@ -33,4 +33,4 @@ const Offer = {
     } //end created (Event hook created automatically when the view is created)
 }
   
-Vue.createApp(Offer).mount('#updateMe');
+Vue.createApp(Offer).mount('#updateMe')

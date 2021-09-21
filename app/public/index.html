@@ -26,18 +26,19 @@
 
 <body>
   <!--This is a bootstap navbar that looks really great SOURCE: https://getbootstrap.com/docs/5.1/components/navbar/ -->
+<div id="updateMe">
   <header>
     <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
     <div class="container-fluid">
-        <h1 class="navbar-brand" id="title">I am Bootsy</h1>
+        <h1 class="navbar-brand" id="title">I am {{ person.name.first }}</h1>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="index.html">About Bootsy</a>
-            <a class="nav-link" href="books.html">Bootsy's Books</a>
-            <a class="nav-link" href="exploits.html">Bootsy's Exploits</a>
+            <a class="nav-link active" aria-current="page" href="index.html">About {{ person.name.first }}</a>
+            <a class="nav-link" href="books.html">{{ person.name.first }}'s Books</a>
+            <a class="nav-link" href="exploits.html">{{ person.name.first }}'s Exploits</a>
           </div>
         </div>
       </div>
@@ -48,16 +49,16 @@
   <br>
   
   <!--Body content begins here and it is super fluid as page size changes-->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6" id="updateMe">
+  <div class="container-fluid" id="">
+    <div class="row" id="">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6" id="">
         <h1>Basic Information</h1>
         <ul>
-          <li><b>Name: </b> {{person.name.first}} </li>
-          <li><b>Country of Origin: </b>United States - Baltimore, MD</li>
-          <li><b>Birthday: </b>June 15, 2006</li>
-          <li><b>Age: </b>14 Years</li>
-          <li><b>Email: </b><a href="mailto:bootsy@bootsymail.com" id="link">bootsy@bootsymail.com</a></li>
+          <li><b>Name: </b> {{ person.name.first }} {{person.name.last }} </li>
+          <li><b>Country of Origin: </b>{{ person.location.city }}, {{ person.location.state }}</li>
+          <li><b>Birthday: </b> {{ person.dob.date }}</li>
+          <li><b>Age: </b> {{ person.dob.age }}</li>
+          <li><b>Email: </b><a v-bind:href="'mailto:'+person.email" id="link">{{ person.email }}</a></li>
           <li><b>Interests:</b>
             <ul>
               <li>Chiquita Bananas</li>
@@ -70,28 +71,28 @@
       
       <!--This is my own image so no citation needed-->
       <div class="col-xs-12 col-sm-6 col-md-8 col-lg-6" id="bootsydiv">
-        <a href="img/bootsy.jpg"><img class ="bootsy" src= "img/bootsy.jpg" alt="Picture of dog computing"></a>
+        <a v-bind:href='person.picture.large'><img class ="bootsy" v-bind:src='person.picture.large' alt="Picture of human"></a>
       </div>
-      
+
       <!--Just jibberish about my dog-->
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h1>Bootsy's Mission</h1>
+        <h1>{{ person.name.first }}'s Mission</h1>
         <p>
-          Bootsy, from a very young age, has always had a passion for computing.
-          From the first moment he laid eyes on a motherboard, he knew that technology was his calling.
-          Bootsy has a Phd. from every major university and has been awarded <b>Dog of Year</b> for five years running. 
-          He recently recieved the key to New York City where he has been known to live.
+          From a very young age, this person has always had a passion for computing.
+          From the first moment they laid eyes on a motherboard, they knew that technology was their calling.
+          This person has a Phd. from every major university and has been awarded <b>Person of Year</b> for five years running. 
+          They recently recieved the key to New York City where he has been known to live.
         </p>
         <hr>
         <p>
-          Bootsy, now retired, enjoys cyber security on his free time.
-          On a continual mission to learn, he finds himself conducting malware analysis and forensics to better help others learn about computing.
-          On his free time, Bootsy enjoys long walks in the park and the occasional banana.
+          This person, now retired, enjoys cyber security on his free time.
+          On a continual mission to learn, they finds themself conducting malware analysis and forensics to better help others learn about computing.
+          On their free time, they enjoy long walks in the park and the occasional banana.
         </p>
       </div>
     </div>
   </div>
-
+</div>
 
   <!--Break for formatting-->
   <br>

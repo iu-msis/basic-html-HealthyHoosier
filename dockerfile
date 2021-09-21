@@ -6,4 +6,4 @@ LABEL maintainer="Maxwell Werner"
 WORKDIR /var/www/html
 
 #Copy our public folder to the working directory
-COPY app/public .
+COPY /app/public .
