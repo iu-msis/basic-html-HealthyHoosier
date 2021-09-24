@@ -1,7 +1,14 @@
 const Offer = {
     data() {
       return {
-        "person": {},
+        "person": {
+            name: {},
+            dob: {},
+            picture: {},
+            location:{},
+            street: {},
+            city: {},
+        },
         }
     },
     

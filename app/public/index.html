@@ -26,7 +26,7 @@
 
 <body>
   <!--This is a bootstap navbar that looks really great SOURCE: https://getbootstrap.com/docs/5.1/components/navbar/ -->
-<div id="updateMe">
+<div id="updateMe" v-if="person">
   <header>
     <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
     <div class="container-fluid">
@@ -54,9 +54,9 @@
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6" id="">
         <h1>Basic Information</h1>
         <ul>
-          <li><b>Name: </b> {{ person.name.first }} {{person.name.last }} </li>
+          <li><b>Name: </b> {{ person.name.first }} {{ person.name.last }} </li>
           <li><b>Country of Origin: </b>{{ person.location.city }}, {{ person.location.state }}</li>
-          <li><b>Birthday: </b> {{ person.dob.date }}</li>
+          <li><b>Birthday: </b> {{ prettyBirthday }}</li>
           <li><b>Age: </b> {{ person.dob.age }}</li>
           <li><b>Email: </b><a v-bind:href="'mailto:'+person.email" id="link">{{ person.email }}</a></li>
           <li><b>Interests:</b>
@@ -67,6 +67,9 @@
             </ul>
           </li>
         </ul>
+        <form v-on:submit.prevent="fetchUserData"> <!--Forms have a default action to send data, and it refreshes the entire page-->
+          <button class="button" type="submit">Refresh</button>
+        </form>
       </div>
       
       <!--This is my own image so no citation needed-->
