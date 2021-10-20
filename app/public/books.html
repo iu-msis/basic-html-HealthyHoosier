@@ -48,8 +48,10 @@
   <br>
   
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="BookApp">
+    <div class="row" id="BookApp">
+      
+      <!-------------------------------------------------------------TABLE------------------------------------------>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <!--Header for the table-->
         <h1 id="book_header">Bootsy's Favorite Books</h1>
         <!--Here begins our table-->
@@ -75,92 +77,45 @@
               <td>{{ b.count }}</td>
               <td>{{ b.msrp }}</td>
             </tr>
-          <!--
-            <tr>
-              <td>The Cuckoo's Egg</td>
-              <td>Cliff Stoll</td>
-              <td>2005</td>
-              <td>Pocket Books</td>
-              <td>399 Pages</td>
-              <td>$13.69</td>
-            </tr>
-            <tr>
-              
-              <td>CISSP (ISC)2 Certified Information Security Professional</td>
-              <td>James Michael Stewart, Mike Chapple, Darril Gibson</td>
-              <td>2015</td>
-              <td>Sybex</td>
-              <td>1405 Pages</td>
-              <td>$40.99</td>
-            </tr>
-            <tr>
-              
-              <td>Fear and Loathing in Las Vegas</td>
-              <td>Hunter S. Thompson</td>
-              <td>1998</td>
-              <td>Vintage</td>
-              <td>204 Pages</td>
-              <td>$8.76</td>
-            </tr>
-            <tr>
-              
-              <td>Hacking For Dummies</td>
-              <td>Kevin Beaver</td>
-              <td>2013</td>
-              <td>For Dummies</td>
-              <td>408 Pages</td>
-              <td>$16.63</td>
-            </tr>
-          -->
           </tbody>
 
-        </table>  
+        </table>
+        <br>  
       </div>
-    </div>
-  </div>
-  
-  <!--FOrmatting Breaks-->
-  <br>
-  <br>
-
-  <!--This will begin the form section of this page-->
-  <div class="container-fluid">
-    <div class="row">
+      
+      <!------------------------------------------This will begin the form section of this page------------------------>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        
         <!--This begins the form-->
-        <form action="" method="POST" id="formy">
+        <form v-on:submit.prevent="postNewBook" id="formy">
           <fieldset>
             <!--Here is our form title-->
             <legend id="form_title">Book Entry Form</legend>
             <br>
             <br>
-
             <!--Here are the form fields-->
             <label for="book_name">Book Name:</label>
-            <input type="text" name="book_name" id="book_name" required><br><br>
+            <input type="text" v-model="bookForm.title" name="book_name" id="book_name" required><br><br>
 
             <label for="book_author">Book Author:</label>
-            <input type="text" name="book_author" id="book_author" required><br><br>
+            <input type="text" v-model="bookForm.author" name="book_author" id="book_author" required><br><br>
 
             <label for="publish_year">Year Published:</label>
-            <input type="number" name="publish_year" id="publish_year"><br><br>
+            <input type="number" v-model="bookForm.yearPublished" name="publish_year" id="publish_year"><br><br>
 
             <label for="publisher_name">Publisher:</label>
-            <input type="text" name="publisher_name" id="publisher_name"><br><br>
+            <input type="text" v-model="bookForm.publisher" name="publisher_name" id="publisher_name"><br><br>
 
             <label for="pages_number">Number of Pages:</label>
-            <input type="number" name="pages_number" id="pages_number"><br><br>
+            <input type="number" v-model="bookForm.count" name="pages_number" id="pages_number"><br><br>
 
             <label for="msrp_amount">MSRP:</label>
-            <input type="text" value="$" name="msrp_amount" id="msrp_amount"><br><br>
+            <input type="text" v-model="bookForm.msrp" name="msrp_amount" id="msrp_amount"><br><br>
 
             <br>
-            <a class="button">Submit Form</a>
+              <button type="submit" class="btn btn-primary">Submit</button>
             <br>
           </fieldset>
         </form>
-
       </div>
     </div>
   </div>
