@@ -3,6 +3,7 @@ const BookApp = {
     return {
       "books":[],
       bookForm:{},
+      selectedBook: null,
     }
   },
   
