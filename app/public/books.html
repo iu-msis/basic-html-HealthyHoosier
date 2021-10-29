@@ -75,7 +75,11 @@
               <td>{{ b.yearPublished }}</td>
               <td>{{ b.publisher }}</td>
               <td>{{ b.count }}</td>
-              <td>{{ b.msrp }}</td>
+              <td>{{ prettyDollar(b.msrp) }}</td>
+              <td>
+                <button type="button" class="btn btn-outline-secondary btn-sm" v-on:click="selectBookToEdit(b)">Edit</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm" v-on:click="postDeleteBook(b)">Delete</button>
+              </td>
             </tr>
           </tbody>
 
@@ -86,10 +90,10 @@
       <!------------------------------------------This will begin the form section of this page------------------------>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <!--This begins the form-->
-        <form v-on:submit.prevent="postNewBook" id="formy">
+        <form v-on:submit.prevent="postBook" id="formy">
           <fieldset>
             <!--Here is our form title-->
-            <legend id="form_title">Book Entry Form</legend>
+            <legend id="form_title"><h3>{{ selectedBook === null ? "Add " : "Edit " }} Book</h3></legend>
             <br>
             <br>
             <!--Here are the form fields-->
@@ -112,7 +116,8 @@
             <input type="text" v-model="bookForm.msrp" name="msrp_amount" id="msrp_amount"><br><br>
 
             <br>
-              <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">{{ selectedBook === null ? "Add " : "Edit " }} Book</button>
+            <button type="button" class="btn btn-outline-secondary" v-if="selectedBook" v-on:click="resetBookForm">Cancel</button>
             <br>
           </fieldset>
         </form>
